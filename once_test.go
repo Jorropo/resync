@@ -1,16 +1,15 @@
-package resync_test
+package resync
 
 import (
 	"testing"
 
 	"github.com/cheekybits/is"
-	"github.com/matryer/resync"
 )
 
 func TestOnceReset(t *testing.T) {
 	is := is.New(t)
 	var calls int
-	var c resync.Once
+	var c Once
 	c.Do(func() {
 		calls++
 	})
